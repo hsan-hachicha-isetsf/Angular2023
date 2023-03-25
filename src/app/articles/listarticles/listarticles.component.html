@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+<h1>Liste des articles</h1>
+<div class="container">
+    <button type="button" class="btn btn-success" routerLink="/insertart">Nouveau</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            
+            <th>Référence</th>
+            <th>Désignation</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+            <th>marque</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+        
+    </thead>
+<tbody>
+<tr *ngFor="let a of articles">
+<td><img src={{a.imageart}} width="60" height="60"/></td>
+
+<td>{{a.reference}}</td>
+<td>{{a.designation}}</td>
+<td>{{a.qtestock}}</td>
+<td>{{a.prix}}</td>
+<td>{{a.marque}}</td>
+
+<td><button type="button" class="btn btn-primary"  
+    [routerLink]="['/editarticle/',a._id]">Modifier</button></td>
+<td><button type="button" class="btn btn-danger" (click)="supparticle(a._id)">Supprimer</button></td>
+</tr>
+</tbody>
+
+</table>
+
+
+</div>

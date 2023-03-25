@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<form (ngSubmit)="ajoutarticle()">
+<div class="mb-3">
+    
+    <input type="text" class="form-control" id="reference"  name = "reference" placeholder="référence" [(ngModel)]="article.reference" >
+  </div>
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" id="designation"  name = "designation" placeholder="Désignation" [(ngModel)]="article.designation" >
+  </div>
+  <div class="mb-3">
+    
+    <input type="number" class="form-control" id="prix"  name = "prix" placeholder="Prix" [(ngModel)]="article.prix" >
+  </div>
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" id="qtestock"  name = "qtestock" placeholder="Quantité" [(ngModel)]="article.qtestock" >
+  </div>
+ 
+   
+      <div class="mb-3">
+      <select name="scategorieID" class="form-control" [(ngModel)]="article.scategorieID" >
+              <option *ngFor="let sd of scategorie" value="{{sd._id}}">
+                  {{sd.nomscategorie}}
+                  
+              </option>
+                      </select>
+          </div>
+        
+      
+          <div class="mb-3">
+    <input type="text" class="form-control" id="marque"  name = "marque" placeholder="Marque" [(ngModel)]="article.marque" >
+  </div>
+  <div class="mb-3">
+   
+   
+              <input
+                type="file"
+                (input) = "submitImage($event)"
+               />
+             
+    
+  </div>
+<div>
+  <button type="submit" class="btn btn-success">Enregistrer</button>
+</div>
+{{article.scategorieID}}
+</form>
+  
+

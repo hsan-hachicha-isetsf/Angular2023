@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div class ="row">
+<div class="col-md-2"  *ngFor="let a of articles">
+<div class="card" style="width:280px;height: 380px; " >
+    <img src={{a.imageart}} class="card-img-top" alt="..." width="250" height="250" >
+    <div class="card-body">
+      <h5 class="card-title">prix: {{a.prix}}</h5>
+      <p class="card-text">{{a.designation}}</p>
+      <a href="#" class="btn btn-primary">Add to Card</a>
+    </div>
+</div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<form (ngSubmit)="signUp()">
+    <div style="display: flex;flex-direction: column;justify-content: start;align-items: flex-start;margin-top: 32px;margin-left: 200px;">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="email"  name = "email" placeholder="Email" [(ngModel)]="user.email" >
+    </div>
+    
+    <div class="mb-3">
+        <input type="password" class="form-control" id="password"  name = "password" placeholder="Password"  [(ngModel)]="user.password" >
+    </div>
+    
+    <div class="mb-3">
+        <input type="text" class="form-control" id="firstname"  name = "firstname" placeholder="FirstName"   [(ngModel)]="user.firstname">
+    </div>
+      
+    <div class="mb-3">
+        <input type="text" class="form-control" id="lastname"  name = "lastname" placeholder="LastName"   [(ngModel)]="user.lastname">
+    </div>
+     
+      
+    <div>
+      <button type="submit" class="btn btn-success">S'enregistrer</button>
+    </div>
+</div>
+    </form>
+      
+  
+    
